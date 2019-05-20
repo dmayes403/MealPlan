@@ -9,7 +9,7 @@ function TopNav() {
             <div className="tp-menu-items">
                 <Link to={'/'} className="tp-title">Meal Plan</Link>
                 <span style={{fontSize: '24px'}}>|</span>
-                <Link to={'/recipe-dashboard'} className="tp-menu-item">Recipes</Link>
+                <Link to={'/recipe-home'} className="tp-menu-item">Recipes</Link>
                 <Link to={'/my-plan'} className="tp-menu-item">My Plan</Link>
             </div>
             <AccountCircleOutline style={{fontSize: '32px', color: '#4c8492'}} />

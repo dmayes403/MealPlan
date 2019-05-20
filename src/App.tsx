@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from './components/home/home'
 import TopNav from './components/top-nav/top-nav';
+import RecipeHome from './components/recipe-home/recipe-home';
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                 <TopNav />
                 <div>
                     <Route exact path="/" component={Home}/>
+                    <Route exact path="/recipe-home" component={RecipeHome}/>
                 </div>
             </Router>
         );
