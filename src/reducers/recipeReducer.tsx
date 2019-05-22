@@ -1,9 +1,6 @@
 import { FETCH_CATEGORIES } from '../actions/types';
 import { Action } from '../interfaces/action';
-
-interface RecipeState {
-    categories: string[];
-}
+import { RecipeState } from '../interfaces/recipeState';
 
 const startingState = {
     categories: []
@@ -21,16 +18,3 @@ export default function(state = startingState, action: Action) {
             return state;
     }
 }
-
-
-
-
-// export default function(state = {movies: [], pageData: {}}, action) {
-//     // ^^ default state to an empty array
-//     switch (action.type) {
-//         case SEARCH_MOVIES:
-//             return action.payload;
-//         default:
-//             return state;
-//     }
-// }
