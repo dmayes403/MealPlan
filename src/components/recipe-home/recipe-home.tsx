@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './recipe-home.scss';
+import * as actions from '../../actions';
 
-class RecipeHome extends Component {
+interface TestProps {
+    getCategories: any
+}
+
+class RecipeHome extends Component<TestProps> {
+    componentDidMount() {
+        this.props.getCategories();
+    }
 
     render() {
         return (
@@ -12,4 +21,8 @@ class RecipeHome extends Component {
     }
 }
 
-export default RecipeHome;
+function mapStateToProps({}) {
+    return {};
+}
+
+export default connect(mapStateToProps, actions)(RecipeHome);
