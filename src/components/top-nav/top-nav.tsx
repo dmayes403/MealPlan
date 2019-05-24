@@ -18,3 +18,4 @@ function TopNav() {
 }
 
 export default TopNav;
+// need to figure out useEffect, useState, useContext
