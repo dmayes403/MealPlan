@@ -6,6 +6,6 @@ export const getCategories = () => dispatch => {
     // dispatch({ type: SEARCH_MOVIES, payload: { movies: res.data.movies, pageData: res.data.pageData }});
     axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?c=list`).then(res => {
         console.log(res.data.meals);
-        dispatch({ type: FETCH_CATEGORIES, payload: {categories: res.data.meals}});
+        dispatch({ type: FETCH_CATEGORIES, payload: res.data.meals});
     })
 };

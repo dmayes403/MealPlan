@@ -9,9 +9,13 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import { Theme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
+import { useState } from 'react';
 
 interface TestProps {
-    getCategories: any
+    getCategories: any,
+    recipes?: {
+        categories: {strCategory: string}[]
+    }
 }
 
 class RecipeFilter extends Component<TestProps> {
@@ -20,11 +24,25 @@ class RecipeFilter extends Component<TestProps> {
     }
 
     render() {
-        return (
-            <div>
-                Testing if this is working...
-            </div>
-        )
+        console.log(this.props);
+        if (this.props.recipes && this.props.recipes.categories.length) {
+            return (
+                <div style={{margin: '16px'}}>
+                    <Tabs 
+                        value={0}>
+                        {/* {this.props.recipes.categories.map(category => {
+                            return <Tab key={category.strCategory} label={category.strCategory}/>
+                        })} */}
+                        <Tab label="Categories"/>
+                    </Tabs>
+                    {value === 0 && <TabContainer>Item One</TabContainer>}
+                </div>
+            )
+        } else {
+            return (
+                <p>No Categories Exist</p>
+            )
+        }
     }
 
 }
